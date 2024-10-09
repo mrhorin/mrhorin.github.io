@@ -1,0 +1,8 @@
+services:
+  node:
+    build: .
+    ports:
+      - "8000:3000"
+    volumes:
+      - .:/portfolio
+    tty: true

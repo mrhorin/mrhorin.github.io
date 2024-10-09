@@ -1,0 +1,84 @@
+:root{
+  --main-bg-color1: #272829;
+  --main-bg-color2: #34353a;
+  --main-bg-color3: #3d3e42;
+  --accent-color1: #1d8b0a;
+  --accent-color2: #91c032;
+}
+html{
+  font-size: 16px;
+}
+body{
+  color: #ffffff;
+  background: var(--main-bg-color1);
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-flex-container{
+  display: flex;
+  flex-direction: row;
+}
+.main-flex-item{
+  background: var(--main-bg-color2);
+  border-radius: 3px;
+  border: 1px solid var(--accent-color1);
+  width: 50%;
+  padding: 30px;
+  margin: 10px;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+}
+.profile-avatar{
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 1000px;
+  border: 2px solid var(--accent-color2);
+  background: url('./profile.png');
+  background-size: cover;
+}
+// .profile-name{
+// }
+// .profile-desc{
+// }
+.profile-skills{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .profile-skills-item{
+    display: flex;
+    flex-direction: column;
+    height: 6rem;
+    width: 6rem;
+    margin: 0.5rem;
+    background: var(--main-bg-color3);
+    align-items: center;
+    justify-content: center;
+    .profile-skills-item-icon{
+      font-size: 2.3rem;
+      line-height: 0rem;
+    }
+    .profile-skills-item-name{
+      font-size: 0.75rem;
+      margin-top: 0.75rem;
+    }
+  }
+}
+.profile-title{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: bold;
+}
