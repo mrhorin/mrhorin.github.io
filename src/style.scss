@@ -45,13 +45,9 @@ body{
   text-align: center;
   border-radius: 1000px;
   border: 2px solid var(--accent-color2);
-  background: url('./profile.png');
+  background: url('profile.png');
   background-size: cover;
 }
-// .profile-name{
-// }
-// .profile-desc{
-// }
 .profile-skills{
   display: flex;
   flex-wrap: wrap;
