@@ -1,15 +1,17 @@
 :root{
-  --main-bg-color1: #272829;
-  --main-bg-color2: #34353a;
-  --main-bg-color3: #3d3e42;
-  --accent-color1: #1d8b0a;
-  --accent-color2: #91c032;
+  --main-bg-color1: #eef0f3;
+  --main-bg-color2: #ffffff;
+  --main-bg-color3: #f3f4fb;
+  --accent-color1: #f47bad;
+  --accent-color2: #4eb0dd;
+  --font-color: #3c3c3c;
+  --box-shadow-color: #00000029;
 }
 html{
   font-size: 16px;
 }
 body{
-  color: #ffffff;
+  color: var(--font-color);
   background: var(--main-bg-color1);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
@@ -27,8 +29,8 @@ body{
 }
 .main-flex-item{
   background: var(--main-bg-color2);
-  border-radius: 3px;
-  border: 1px solid var(--accent-color1);
+  box-shadow: 0 3px 6px var(--box-shadow-color);
+  border-radius: 6px;
   width: 50%;
   padding: 30px;
   margin: 10px;
@@ -39,12 +41,11 @@ body{
   flex-direction: column;
 }
 .profile-avatar{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
   text-align: center;
   border-radius: 1000px;
-  border: 2px solid var(--accent-color2);
   background: url('profile.png');
   background-size: cover;
 }
@@ -56,10 +57,13 @@ body{
   .profile-skills-item{
     display: flex;
     flex-direction: column;
-    height: 6rem;
-    width: 6rem;
+    height: 6.5rem;
+    width: 6.5rem;
     margin: 0.5rem;
     background: var(--main-bg-color3);
+    border-radius: 6px;
+    box-shadow: 0 3px 6px var(--box-shadow-color);
+    cursor: default;
     align-items: center;
     justify-content: center;
     .profile-skills-item-icon{
@@ -72,9 +76,94 @@ body{
     }
   }
 }
+.profile-contact{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  .profile-contact-item{
+    color: var(--font-color);
+    text-decoration: none;
+    background: var(--main-bg-color1);
+    border-radius: 6px;
+    box-shadow: 0 3px 6px var(--box-shadow-color);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    &:hover{
+      background: var(--accent-color2);
+      color: var(--main-bg-color2);
+      transition: 0.5s;
+    }
+    .profile-contact-item-icon{
+      order: 1;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-right: 0.5rem;
+    }
+    .profile-contact-item-text{
+      order: 2;
+      font-size: 1rem;
+      font-weight: bold;
+      line-height: 1.5rem;
+    }
+  }
+}
 .profile-title{
   font-size: 1.2rem;
   margin: 1rem 0;
   text-align: center;
   font-weight: bold;
+}
+
+.copy-box{
+  position: relative;
+  width: 6rem;
+  background: var(--font-color);
+  padding: 10px 15px;
+  text-align: center;
+  color: var(--main-bg-color2);
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.copy-box:after{
+  border: solid transparent;
+  content:'';
+  height:0;
+  width:0;
+  pointer-events:none;
+  position:absolute;
+  border-color: rgba(0, 153, 255, 0);
+  border-top-width:10px;
+  border-bottom-width:10px;
+  border-left-width:8px;
+  border-right-width:8px;
+  margin-left: -8px;
+  border-top-color: var(--font-color);
+  top:100%;
+  left:50%;
+}
+
+#contact-mail{
+  position: relative;
+  .copy-box{
+    position: absolute;
+    left: 3rem;
+    top: -2rem;
+    visibility: hidden;
+  }
+  &:hover{
+    .copy-box{
+      visibility: visible;
+      top: -2.3rem;
+      transition: .3s;
+    }
+  }
 }
