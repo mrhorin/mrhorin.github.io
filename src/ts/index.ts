@@ -1,4 +1,4 @@
-import 'style'
+import 'scss/style'
 
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faHtml5, faCss3Alt, faJs, faSketch, faReact, faWordpress, faLinux, faDocker, faGit, faPython, faGithub, faLinkedin, faRProject } from '@fortawesome/free-brands-svg-icons'
