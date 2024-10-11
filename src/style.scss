@@ -1,5 +1,8 @@
+/******************************************
+  CSS3 variables
+ ******************************************/
 :root{
-  --main-bg-color1: #eef0f3;
+  --main-bg-color1: #f4f7fb;
   --main-bg-color2: #ffffff;
   --main-bg-color3: #f3f4fb;
   --accent-color1: #f47bad;
@@ -7,10 +10,24 @@
   --font-color: #3c3c3c;
   --box-shadow-color: #00000029;
 }
+
+/******************************************
+  Sass variables and functions
+ ******************************************/
+ $sp-break-point: 768px;
+
+@mixin sp {
+  @media screen and (max-width: $sp-break-point) {
+    @content;
+  }
+}
+
 html{
   font-size: 16px;
 }
 body{
+  margin: 0;
+  padding: 0;
   color: var(--font-color);
   background: var(--main-bg-color1);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -21,24 +38,65 @@ body{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
-
 .main-flex-container{
   display: flex;
   flex-direction: row;
+  @include sp{
+    flex-direction: column;
+    padding: 5px;
+  }
+  .main-flex-item{
+    box-sizing: border-box;
+    width: 50%;
+    margin: 10px;
+    @include sp{
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
 }
-.main-flex-item{
+
+.box1{
   background: var(--main-bg-color2);
-  box-shadow: 0 3px 6px var(--box-shadow-color);
   border-radius: 6px;
-  width: 50%;
-  padding: 30px;
-  margin: 10px;
+  box-shadow: 0 3px 6px var(--box-shadow-color);
+}
+.box2{
+  background: var(--main-bg-color3);
+  border-radius: 6px;
+  box-shadow: 0 3px 6px var(--box-shadow-color);
+}
+.box-overlay{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  &::after{
+    visibility: hidden;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--font-color);
+    opacity: 0;
+  }
+  &:hover{
+    &::after{
+      transition: .2s;
+      visibility: visible;
+      opacity: .15;
+    }
+  }
 }
 
 .profile{
   display: flex;
   flex-direction: column;
+  padding: 30px;
 }
 .profile-avatar{
   width: 120px;
@@ -55,14 +113,12 @@ body{
   justify-content: center;
   align-items: center;
   .profile-skills-item{
+    @extend .box2;
     display: flex;
     flex-direction: column;
     height: 6.5rem;
     width: 6.5rem;
     margin: 0.5rem;
-    background: var(--main-bg-color3);
-    border-radius: 6px;
-    box-shadow: 0 3px 6px var(--box-shadow-color);
     cursor: default;
     align-items: center;
     justify-content: center;
@@ -82,11 +138,9 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   .profile-contact-item{
+    @extend .box2;
     color: var(--font-color);
     text-decoration: none;
-    background: var(--main-bg-color1);
-    border-radius: 6px;
-    box-shadow: 0 3px 6px var(--box-shadow-color);
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     cursor: pointer;
@@ -118,6 +172,54 @@ body{
   margin: 1rem 0;
   text-align: center;
   font-weight: bold;
+}
+
+.portfolio{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  .portfolio-item{
+    @extend .box1;
+    width: 47%;
+    margin: 0 1.5% 3% 1.5%;
+    overflow: hidden;
+    @include sp{
+      width: 100%;
+      margin: 0 0 5% 0;
+    }
+    .portfolio-item-img{
+      max-width: 100%;
+      height: 100%;
+      aspect-ratio: 16/9;
+      img{
+        max-width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+    }
+    .portfolio-item-text{
+      padding: 1rem;
+      .portfolio-item-text-title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .portfolio-item-text-desc{
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+      }
+    }
+  }
 }
 
 .copy-box{
