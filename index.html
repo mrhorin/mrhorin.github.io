@@ -6,6 +6,20 @@
     <title>ポートフォリオ | mrhorin</title>
   </head>
   <body>
+    <!-- Dialog -->
+    <div id="dialog">
+      <div id="dialog-header">
+        <div id="dialog-xmark">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div id="dialog-body">
+      </div>
+      <div id="dialog-footer">
+        <button id="dialog-close">閉じる</button>
+      </div>
+    </div>
+
     <div class="main-flex-container container">
       <!-- Profile -->
       <div class="profile main-flex-item box1">
@@ -134,95 +148,66 @@
       <!-- Portfolio -->
       <div class="portfolio main-flex-item">
         <!-- Makele -->
-        <div class="portfolio-item box-overlay">
+        <div class="portfolio-item">
           <div class="portfolio-item-img">
             <img src="src/img/sc-makele-game.png"/>
           </div>
           <div class="portfolio-item-text">
-            <div class="portfolio-item-text-title">
-              Makeleあああああああああああああああああああああああああああああああああああああああ
-            </div>
+            <div class="portfolio-item-text-title">Makele</div>
             <div class="portfolio-item-text-desc">
-              本文本文本文本文本文本文本文本文本文
-              本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
+              <p>
+                単語当てゲーム「ワードル」を自分の好きなワードで作れるWebアプリ。<br>
+                使用フレームワークはNext.js + Rails APIモードでSPA開発しており、SSR、SSGを行うことでSEO対策およびFPC（First Contentful Paint ）の向上を実現しました。<br>
+                デザイン面ではCSSフレームワークなどは使用せず、レスポンシブデザイン、ダーク/ライトテーマを切り替え機能に対応しています。
+                またPWAによるアプリ化にも対応しており、スマートフォンなどでホーム画面にインストールすることもできます。
+              </p>
+            </div>
+            <div class="portfolio-item-text-url">
+              <a class="portfolio-item-link-box" href="https://makele.mrhori.org" target="_blank">
+                <i class="fa-solid fa-link"></i>
+                <div class="portfolio-item-link-box-url">
+                  https://makele.mrhori.org
+                </div>
+              </a>
+            </div>
+            <div class="portfolio-item-text-repo">
+              <ul>
+                <li>
+                  <a class="portfolio-item-link-box" href="https://github.com/mrhorin/wordle_maker_api" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="portfolio-item-link-box-url">
+                      https://github.com/mrhorin/wordle_maker_api
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="portfolio-item-link-box" href="https://github.com/mrhorin/wordle_maker_ui" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="portfolio-item-link-box-url">
+                      https://github.com/mrhorin/wordle_maker_ui
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-item-text-tech">
+              <ul>
+                <li>Ruby on Rails</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+              </ul>
             </div>
           </div>
         </div>
         <!-- savizankun -->
-        <div class="portfolio-item box-overlay">
-          <div class="portfolio-item-img">
-            <img src="src/img/sc-makele-game.png"/>
-          </div>
-          <div class="portfolio-item-text">
-            <div class="portfolio-item-text-title">
-              Makeleあああああああああああああああああああああああああああああああああああああああ
-            </div>
-            <div class="portfolio-item-text-desc">
-              本文本文本文本文本文本文本文本文本文
-              本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
-            </div>
-          </div>
-        </div>
+
         <!-- epcyp -->
-        <div class="portfolio-item box-overlay">
-          <div class="portfolio-item-img">
-            <img src="src/img/sc-makele-game.png"/>
-          </div>
-          <div class="portfolio-item-text">
-            <div class="portfolio-item-text-title">
-              Makeleあああああああああああああああああああああああああああああああああああああああ
-            </div>
-            <div class="portfolio-item-text-desc">
-              本文本文本文本文本文本文本文本文本文
-              本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
-            </div>
-          </div>
-        </div>
+
         <!-- epcviewer -->
-        <div class="portfolio-item box-overlay">
-          <div class="portfolio-item-img">
-            <img src="src/img/sc-makele-game.png"/>
-          </div>
-          <div class="portfolio-item-text">
-            <div class="portfolio-item-text-title">
-              Makeleあああああああああああああああああああああああああああああああああああああああ
-            </div>
-            <div class="portfolio-item-text-desc">
-              本文本文本文本文本文本文本文本文本文
-              本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
-            </div>
-          </div>
-        </div>
+
         <!-- jimaku-server -->
-        <div class="portfolio-item box-overlay">
-          <div class="portfolio-item-img">
-            <img src="src/img/sc-makele-game.png"/>
-          </div>
-          <div class="portfolio-item-text">
-            <div class="portfolio-item-text-title">
-              Makeleあああああああああああああああああああああああああああああああああああああああ
-            </div>
-            <div class="portfolio-item-text-desc">
-              本文本文本文本文本文本文本文本文本文
-              本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
-            </div>
-          </div>
-        </div>
+
         <!-- suggestrap -->
-        <div class="portfolio-item box-overlay">
-          <div class="portfolio-item-img">
-            <img src="src/img/sc-makele-game.png"/>
-          </div>
-          <div class="portfolio-item-text">
-            <div class="portfolio-item-text-title">
-              Makeleあああああああああああああああああああああああああああああああああああああああ
-            </div>
-            <div class="portfolio-item-text-desc">
-              本文本文本文本文本文本文本文本文本文
-              本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <script src="dist/main.js"></script>
