@@ -120,6 +120,10 @@ body{
   color: var(--font-color1);
   background: var(--main-bg-color1);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container{
   max-width: 1200px;
@@ -131,8 +135,7 @@ body{
 .main-flex-container{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  min-height: 100vh;
+  align-items: flex-start;
   @include sp{
     flex-direction: column;
     padding: 5px;
