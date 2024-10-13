@@ -1,9 +1,9 @@
 /***********************************************************
 constructor:
   dialogElement: An element you'd like to show as a dialog.
-  options:
-    prefix: A prefix of ID for the modal element.
-    zIndex: z-index property for the modal element.
+  options?:
+    prefix?: A prefix of ID for the modal element.
+    zIndex?: z-index property for the modal element.
 
 member variables:
   dialogElement:
@@ -36,6 +36,7 @@ export class Modal{
   public show(): void{
     if (!this.isAppended) {
       document.body.prepend(this.element)
+      this.disableBodyScroll()
     }
     if (!this.isStyled) {
       document.head.append(this.createStyleElement())
@@ -43,6 +44,7 @@ export class Modal{
   }
 
   public hide(): void{
+    this.enableBodyScroll()
     document.getElementById(this.id)?.remove()
     document.getElementById(`${this.id}_style`)?.remove()
   }
@@ -81,10 +83,10 @@ export class Modal{
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.75);
       display: flex;
       justify-content: center;
       align-items: center;
+      background: rgba(41,48,66,0.5);
     }`
     style.setAttribute("id", `${this.id}_style`)
     return style
@@ -97,6 +99,14 @@ export class Modal{
     dialogElement.style.left = "50%"
     dialogElement.style.transform = "translate(-50%, -50%)"
     return dialogElement
+  }
+
+  private disableBodyScroll(): void{
+    document.body.style.overflow = "hidden"
+  }
+
+  private enableBodyScroll(): void{
+    document.body.style.overflow = "visible"
   }
 
   private get uniqueID(): string{
