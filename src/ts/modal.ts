@@ -98,6 +98,7 @@ export class Modal{
     dialogElement.style.top = "50%"
     dialogElement.style.left = "50%"
     dialogElement.style.transform = "translate(-50%, -50%)"
+    dialogElement.style.display = "flex"
     return dialogElement
   }
 
