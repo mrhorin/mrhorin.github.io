@@ -32,7 +32,7 @@
         </div>
         <!-- Desc -->
         <div class="profile-desc">
-          フリーランス歴9年のフルスタックエンジニアです。
+          個人開発歴9年のフルスタックエンジニアです。
           Rails + ReactによるWebアプリ開発、electronによるデスクトップアプリの開発や
           WordPressを使ったブログ作成からSEO対策まで何でもやります。
         </div>
@@ -156,14 +156,17 @@
           <div class="portfolio-item-text">
             <div class="portfolio-item-text-title">Makele</div>
             <div class="portfolio-item-text-desc">
+              <p>単語当てゲーム「Wordle」を自分の好きなワードで作れるWebアプリ。</p>
               <p>
-                単語当てゲーム「Wordle」を自分の好きなワードで作れるWebアプリ。<br>
-                使用フレームワークはNext.js + Rails APIモードでSPA開発しており、SSR、SSGを行うことでSEO対策およびFPC（First Contentful Paint ）の向上を実現しました。<br>
-                デザインにはCSSフレームワークなどは使用せず、レスポンシブデザインやダーク/ライトテーマの切り替え機能などすべて自作で実装しています。
-                ユーザー認証にはX(Twitter)のOAuth認証を利用しています。
-                またPWAによるアプリ化にも対応しており、スマートフォンなどのホーム画面にWebアプリとしてインストールすることもできます。<br>
-                サービス名の由来は"Wordle"を"Make"できることから。
+                使用フレームワークはNext.js + Rails APIモードでSPA開発しており、SSR・SSGを行うことでクローラーがJS実行前の状態でインデックスするのを防止し、
+                FPC（First Contentful Paint ）を向上させることでSEO対策にもなっています。
               </p>
+              <p>デザインにはCSSフレームワークなどは使用せず、レスポンシブデザインやダーク/ライトテーマの切り替え機能なども含めてすべて自作で実装しています。</p>
+              <p>
+                ユーザー認証にはX(Twitter)のOAuth認証を利用しています。
+                またPWAによるアプリ化にも対応しており、スマートフォンなどのホーム画面にWebアプリとしてインストールすることもできます。
+              </p>
+              <p>サービス名の由来は"Wordle"を"Make"できることから。</p>
             </div>
             <div class="portfolio-item-text-url">
               <a class="portfolio-item-link-box" href="https://makele.mrhori.org" target="_blank">
@@ -213,14 +216,18 @@
           <div class="portfolio-item-text">
             <div class="portfolio-item-text-title">サビ残くん</div>
             <div class="portfolio-item-text-desc">
+              <p>未払いのサービス残業代を計算してくれるサービスです。</p>
               <p>
-                未払いのサービス残業代を計算できるサービスです。<br>
-                プログラミングの勉強を始めた2013年に人生で初めて作ったサービスです。
-                入力された情報を計算するだけの簡単なサービスで今見返すと至らない点も多々ありますが、
+                プログラミングの勉強を始めた2013年に人生で初めて作ったサービスで、
+                入力された情報を計算するだけの簡単なサービスで、今見返すと至らない点も多々ありますが、
                 自身がプログラミングを始めるきっかけになった作品でもあり、とても思いれ深い作品なのでこのポートフォリオにも掲載することにしました。
+              </p>
+              <p>
                 このサービスを作った理由としては、当時毎日のようにサービス残業をしていた友人の未払いのサービス残業代を計算したところとんでもない額になったので、
-                誰でも簡単にサービス残業代を計算できるようにするために作ることにしました。<br>
-                開発技術には今は懐かしいCofeeScript、Grunt、Bowerなどを使っていますが、当初はPHPで作っていたものを後にJSで書き直しています。
+                誰でも簡単にサービス残業代を計算できるようにするために作ることにしました。
+              </p>
+              <p>
+                開発技術に関しては今は懐かしいCofeeScript、Grunt、Bowerなどを使っていますが、当初はPHPで作っていたものを後にJSで書き直しています。
                 アイコンになっているのは当時毎日のようにサービス残業をしていたという友人です。
               </p>
             </div>
@@ -252,9 +259,51 @@
             </div>
           </div>
         </div>
-        <!-- epcyp -->
-
         <!-- epcviewer -->
+        <div class="portfolio-item">
+          <div class="portfolio-item-img">
+            <img src="https://user-images.githubusercontent.com/6502717/60570760-2f4d2a00-9dad-11e9-8327-a89ee81f7379.png" style="max-height: 550px; width: auto"/>
+          </div>
+          <div class="portfolio-item-text">
+            <div class="portfolio-item-text-title">epcviewer</div>
+            <div class="portfolio-item-text-desc">
+              <p>Electron + Reactで作ったJaneライクな2ch互換掲示板専用ブラウザです。</p>
+              <p>主な機能:</p>
+                <ul>
+                  <li>レス表示、書き込み、自動更新、ID抽出、タブ表示等の一般的な機能</li>
+                  <li>ダーム/ライトテーマの切り替え機能</li>
+                  <li>音声によるレス読み上げ機能</li>
+                  <li>OBSなどの動画エンコーダで新着レスをリアルタイムで字幕表示する動画配信者向け機能</li>
+                </ul>
+              <p>クロスプラットフォームなのでWindows、macOS、Linuxでも動きますが、開発当時は手元にIntel製のMacBook Proしかったので他のOSやアーキテクチャ向けのパッケージは配布していません。</p>
+              <p>
+                掲示板情報の取得に関しては、開発当時はnpmで2ch互換掲示板のAPIを呼び出してくれるライブラリがなかったので、
+                自作ライブラリ <a href="https://www.npmjs.com/package/2ch-parser" target="_blank">2ch-parser</a> を利用しており、モジュール化してnpmライブラリとして公開もしています。
+              </p>
+              <p>字幕表示機能に関しても自作npmライブラリ <a href="https://www.npmjs.com/package/jimaku-server" target="_blank">jimaku-server</a>を利用しており、こちらもnpmライブラリとして公開しています。</p>
+            </div>
+            <div class="portfolio-item-text-repo">
+              <ul>
+                <li>
+                  <a class="portfolio-item-link-box" href="https://github.com/mrhorin/epcviewer" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="portfolio-item-link-box-url">
+                      https://github.com/mrhorin/epcviewer
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-item-text-tech">
+              <ul>
+                <li>Electron</li>
+                <li>React</li>
+                <li>Babel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- epcyp -->
 
         <!-- jimaku-server -->
 

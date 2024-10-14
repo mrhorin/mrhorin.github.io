@@ -288,6 +288,7 @@ body{
   @include sp{
     width: 97vw;
     max-width: none;
+    max-height: 90vh;
   }
   #dialog-header{
     order: 1;
@@ -347,6 +348,7 @@ body{
     display: inline-flex;
     flex-direction: row;
     word-break: break-all;
+    margin: .5rem 0;
     svg, i{
       order: 1;
       padding: .5rem .25rem .5rem 1rem;
@@ -386,7 +388,7 @@ body{
           content: "Repository:";
         }
         li{
-          margin-bottom: .5rem;
+          margin-bottom: .5rem 0;
         }
       }
     }
@@ -404,6 +406,7 @@ body{
         li{
           display: inline-flex;
           padding: 0.2rem 0.5rem;
+          margin: .25rem 0;
           color: var(--main-bg-color1);
           background: var(--accent-color2);
           border: 1px solid var(--accent-color2);
