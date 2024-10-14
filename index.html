@@ -267,7 +267,7 @@
           <div class="portfolio-item-text">
             <div class="portfolio-item-text-title">epcviewer</div>
             <div class="portfolio-item-text-desc">
-              <p>Electron + Reactで作ったJaneライクな2ch互換掲示板専用ブラウザです。</p>
+              <p>Janeライクな2ch互換掲示板専用ブラウザです。</p>
               <p>主な機能:</p>
                 <ul>
                   <li>レス表示、書き込み、自動更新、ID抽出、タブ表示等の一般的な機能</li>
@@ -275,6 +275,7 @@
                   <li>音声によるレス読み上げ機能</li>
                   <li>OBSなどの動画エンコーダで新着レスをリアルタイムで字幕表示する動画配信者向け機能</li>
                 </ul>
+              <p>開発技術に関してはElectron製でReactで開発しています。</p>
               <p>クロスプラットフォームなのでWindows、macOS、Linuxでも動きますが、開発当時は手元にIntel製のMacBook Proしかったので他のOSやアーキテクチャ向けのパッケージは配布していません。</p>
               <p>
                 掲示板情報の取得に関しては、開発当時はnpmで2ch互換掲示板のAPIを呼び出してくれるライブラリがなかったので、
@@ -304,7 +305,54 @@
           </div>
         </div>
         <!-- epcyp -->
-
+        <div class="portfolio-item">
+          <div class="portfolio-item-img">
+            <img src="https://user-images.githubusercontent.com/6502717/58675620-173e5100-8390-11e9-8d81-ee112bf2490e.png" style="max-height: 550px; width: auto"/>
+          </div>
+          <div class="portfolio-item-text">
+            <div class="portfolio-item-text-title">epcyp</div>
+            <div class="portfolio-item-text-desc">
+              <p>PeerCast用のチャンネルビューワーです。</p>
+              <p>
+                PeerCastとは、ライブ配信ができるオープンソースソフトウェアで、
+                P2P方式なので個人が特定のサービスに依存することなく映像を生配信することができ、
+                YouTube、Twitch、ニコニコ生放送などが登場する以前から個人がリアルタイムで映像配信することができる数少ない手段として、知る人ぞ知る存在でした。
+                PeerCastやその関連ツールはすべて個人の有志によって開発されており、このepcypもそのひとつです。
+              </p>
+              <p>
+                epcypはPeerCastのチャンネル一覧の表示、再生や動画配信の録画をするためのツールです。
+                同等の機能を持つツールは既にいくつか存在しますが、macOS用のチャンネルビューワが存在しなかったのでElectronで新たに開発することにしました。
+              </p>
+              <p>主な機能:</p>
+                <ul>
+                  <li>チャンネル一覧の表示、再生、お気に入りチャンネルの登録や通知などの一般的な機能</li>
+                  <li>ダーム/ライトテーマの切り替え機能</li>
+                  <li>配信の録画機能</li>
+                  <li>リレー管理機能</li>
+                </ul>
+              <p>クロスプラットフォームなのでWindows、macOS、Linuxでも動きますが、開発当時は手元にIntel製のMacBook Proしかったので他のOSやアーキテクチャ向けのパッケージは配布していません。</p>
+            </div>
+            <div class="portfolio-item-text-repo">
+              <ul>
+                <li>
+                  <a class="portfolio-item-link-box" href="https://github.com/mrhorin/epcyp" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="portfolio-item-link-box-url">
+                      https://github.com/mrhorin/epcyp
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-item-text-tech">
+              <ul>
+                <li>Electron</li>
+                <li>React</li>
+                <li>Babel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <!-- jimaku-server -->
 
         <!-- suggestrap -->
