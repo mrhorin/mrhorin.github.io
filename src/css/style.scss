@@ -148,7 +148,7 @@ body{
 .main-flex-container{
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   @include sp{
     flex-direction: column;
     padding: 5px;
@@ -239,11 +239,11 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  align-content: flex-start;
+  align-content: space-between;
   .portfolio-item{
     @extend .box1, .box-overlay;
     width: 47%;
-    margin: 0 1.5% 3% 1.5%;
+    margin: 0 1.5% 0 1.5%;
     overflow: hidden;
     animation: fadeIn 0.5s linear 0s 1 normal;
     @include sp{
