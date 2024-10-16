@@ -1,7 +1,7 @@
 /******************************************
   CSS3 variables
  ******************************************/
-:root{
+ body.light{
   --main-bg-color1: #f4f7fb;
   --main-bg-color2: #ffffff;
   --main-bg-color3: #f3f4fb;
@@ -11,7 +11,29 @@
   --font-color2: #757575;
   --border-color1: #d4d2e0;
   --box-shadow-color: #00000029;
-}
+ }
+ body.dark{
+  --main-bg-color1: #1b1b1b;
+  --main-bg-color2: #282828;
+  --main-bg-color3: #383838;
+  --accent-color1: #f47bad;
+  --accent-color2: #4eb0dd;
+  --font-color1: #ffffff;
+  --font-color2: #9a9a9a;
+  --border-color1: #525252;
+  --box-shadow-color: #00000029;
+  ::-webkit-scrollbar{
+    background: var(--main-bg-color1);
+    border-left: none;
+    width: 15px;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-left: 2px solid var(--main-bg-color1);
+    width: 13px;
+    background: var(--main-bg-color3);
+    border-radius: 100px;
+  }
+ }
 
 /******************************************
   Sass variables and functions
@@ -74,7 +96,7 @@
   align-items: center;
   &:hover{
     background: var(--accent-color2);
-    color: var(--main-bg-color2);
+    color: #ffffff;
     transition: 0.5s;
   }
 }
@@ -345,11 +367,11 @@ body{
       margin-right: 1rem;
       font-size: 1rem;
       border-radius: 100rem;
-      border: 1px solid var(--font-color2);
-      background: var(--main-bg-color3);
+      border: 1px solid #757575;
+      background: #f3f4fb;
       cursor: pointer;
       &:hover{
-        background: var(--border-color1);
+        background: #e4e4e4;
         transition: .3s;
       }
     }
@@ -434,7 +456,7 @@ body{
           display: inline-flex;
           padding: 0.2rem 0.5rem;
           margin: .25rem 0;
-          color: var(--main-bg-color1);
+          color: #ffffff;
           background: var(--accent-color2);
           border: 1px solid var(--accent-color2);
           border-radius: 100rem;
