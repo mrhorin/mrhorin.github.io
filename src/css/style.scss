@@ -62,6 +62,7 @@
     }
   }
 }
+
 .link-box{
   @extend .box2;
   color: var(--font-color1);
@@ -77,6 +78,7 @@
     transition: 0.5s;
   }
 }
+
 .copy-box{
   position: relative;
   width: 6rem;
@@ -106,6 +108,17 @@
   border-top-color: var(--font-color1);
   top:100%;
   left:50%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /******************************************
@@ -155,6 +168,7 @@ body{
   display: flex;
   flex-direction: column;
   padding: 30px;
+  animation: fadeIn 0.5s linear 0s 1 normal;
 }
 .profile-avatar{
   width: 120px;
@@ -231,6 +245,7 @@ body{
     width: 47%;
     margin: 0 1.5% 3% 1.5%;
     overflow: hidden;
+    animation: fadeIn 0.5s linear 0s 1 normal;
     @include sp{
       width: 100%;
       margin: 0 0 5% 0;
