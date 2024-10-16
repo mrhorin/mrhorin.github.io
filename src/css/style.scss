@@ -244,6 +244,7 @@ body{
         height: 100%;
         aspect-ratio: 16/9;
         object-fit: cover;
+        object-position: top;
       }
     }
     .portfolio-item-text{
@@ -293,7 +294,7 @@ body{
   #dialog-header{
     order: 1;
     border-bottom: 1px solid var(--border-color1);
-    padding: 1rem;
+    padding: .5rem 1rem;
     display: flex;
     justify-content: end;
     #dialog-xmark{
