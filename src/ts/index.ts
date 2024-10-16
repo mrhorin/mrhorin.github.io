@@ -1,12 +1,12 @@
 import 'css/style'
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
 import { faHtml5, faCss3Alt, faJs, faSketch, faReact, faWordpress, faLinux, faDocker, faGit, faPython, faGithub, faLinkedin, faRProject } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faLink, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faMoon } from '@fortawesome/free-regular-svg-icons'
+import { faLink, faXmark, faSun } from '@fortawesome/free-solid-svg-icons'
 
 import { Modal } from 'ts/modal'
 
-library.add(faHtml5, faCss3Alt, faJs, faSketch, faReact, faWordpress, faLinux, faDocker, faGit, faPython, faEnvelope, faGithub, faLinkedin, faRProject, faLink, faXmark)
+library.add(faHtml5, faCss3Alt, faJs, faSketch, faReact, faWordpress, faLinux, faDocker, faGit, faPython, faEnvelope, faGithub, faLinkedin, faRProject, faLink, faXmark, faSun, faMoon)
 dom.i2svg()
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,4 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }
   }
+
+  // Set theme toggle button
+  const toggleCheckbox = document.getElementById('theme-toggle') as HTMLInputElement;
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    toggleCheckbox.checked = true;
+  } else {
+    document.body.classList.add('light-theme');
+  }
+  toggleCheckbox.addEventListener('change', () => {
+    if (toggleCheckbox.checked) {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  });
 })

@@ -1,27 +1,27 @@
 /******************************************
   CSS3 variables
  ******************************************/
- body.light{
+ :root{
+  --dark-theme-button: #682ee0;
+  --accent-color1: #f47bad;
+  --accent-color2: #4eb0dd;
+  --box-shadow-color: #00000029;
+}
+ body.light-theme{
   --main-bg-color1: #f4f7fb;
   --main-bg-color2: #ffffff;
   --main-bg-color3: #f3f4fb;
-  --accent-color1: #f47bad;
-  --accent-color2: #4eb0dd;
   --font-color1: #3c3c3c;
   --font-color2: #757575;
   --border-color1: #d4d2e0;
-  --box-shadow-color: #00000029;
  }
- body.dark{
+ body.dark-theme{
   --main-bg-color1: #1b1b1b;
   --main-bg-color2: #282828;
   --main-bg-color3: #383838;
-  --accent-color1: #f47bad;
-  --accent-color2: #4eb0dd;
   --font-color1: #ffffff;
   --font-color2: #9a9a9a;
   --border-color1: #525252;
-  --box-shadow-color: #00000029;
   ::-webkit-scrollbar{
     background: var(--main-bg-color1);
     border-left: none;
@@ -158,7 +158,17 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem;
+  .toggle-container{
+    margin-right: 1rem;
+  }
 }
 .container{
   max-width: 1200px;
@@ -485,4 +495,66 @@ body{
       transition: .3s;
     }
   }
+}
+
+/* Theme buttons */
+.toggle-container {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  input[type="checkbox"] {
+    display: none;
+  }
+}
+.toggle {
+  @extend .box1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  background-color: var(--accent-color2);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: background-color 0.3s ease;
+}
+.toggle i,
+.toggle svg {
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+}
+.fa-sun {
+  right: 10px;
+}
+.fa-moon {
+  left: 10px;
+}
+.slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+input:checked + label {
+  background-color: var(--dark-theme-button);
+}
+
+input:checked + label .slider {
+  left: calc(100% - 27px);
+}
+
+input:checked + label i.fa-sun {
+  display: none;
+}
+
+input:checked + label i.fa-moon {
+  display: block;
 }
