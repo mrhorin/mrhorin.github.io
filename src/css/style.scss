@@ -14,6 +14,7 @@
   --font-color1: #3c3c3c;
   --font-color2: #757575;
   --border-color1: #d4d2e0;
+  --box-overlay-color: #dbdbdb;
  }
  body.dark-theme{
   --main-bg-color1: #1b1b1b;
@@ -22,6 +23,7 @@
   --font-color1: #ffffff;
   --font-color2: #9a9a9a;
   --border-color1: #525252;
+  --box-overlay-color: #6f6f6f;
   ::-webkit-scrollbar{
     background: var(--main-bg-color1);
     border-left: none;
@@ -73,14 +75,14 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: var(--font-color1);
+    background: var(--box-overlay-color);
     opacity: 0;
   }
   &:hover{
     &::after{
       transition: .2s;
       visibility: visible;
-      opacity: .15;
+      opacity: .25;
     }
   }
 }
