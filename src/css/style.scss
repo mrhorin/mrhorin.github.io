@@ -251,7 +251,7 @@ body{
       padding: 1rem;
       .portfolio-item-text-title{
         font-size: 1.2rem;
-        line-height: 1.5rem;
+        line-height: 1.2rem;
         font-weight: bold;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -279,7 +279,7 @@ body{
   width: 75vw;
   max-width: $sp-break-point;
   height: auto;
-  max-height: 80vh;
+  max-height: 90vh;
   background: var(--main-bg-color2);
   border: 1px solid var(--border-color1);
   border-radius: 6px;
@@ -315,6 +315,7 @@ body{
     display: flex;
     justify-content: end;
     button{
+      @extend .box2;
       padding: .25rem 1rem;
       margin-right: 1rem;
       font-size: 1rem;
