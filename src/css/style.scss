@@ -13,6 +13,7 @@
   --main-bg-color3: #f3f4fb;
   --font-color1: #3c3c3c;
   --font-color2: #757575;
+  --font-link-color: #2652e2;
   --border-color1: #d4d2e0;
   --box-overlay-color: #dbdbdb;
  }
@@ -22,6 +23,7 @@
   --main-bg-color3: #383838;
   --font-color1: #ffffff;
   --font-color2: #9a9a9a;
+  --font-link-color: var(--accent-color1);
   --border-color1: #525252;
   --box-overlay-color: #6f6f6f;
   ::-webkit-scrollbar{
@@ -146,11 +148,21 @@
 }
 
 /******************************************
-  Layout elements
+  Overrinding
  ******************************************/
-html{
+ html{
   font-size: 16px;
 }
+a{
+  color: var(--font-link-color);
+}
+p{
+  line-height: 1.5rem;
+}
+
+/******************************************
+  Layout elements
+ ******************************************/
 body{
   margin: 0;
   padding: 0;
