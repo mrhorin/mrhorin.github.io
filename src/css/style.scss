@@ -283,6 +283,8 @@ header{
     margin: 0 1.5% 0 1.5%;
     overflow: hidden;
     animation: fadeIn 0.5s linear 0s 1 normal;
+    display: flex;
+    flex-direction: column;
     @include sp{
       width: 100%;
       margin: 0 0 5% 0;
@@ -294,6 +296,7 @@ header{
       }
     }
     .portfolio-item-img{
+      order: 1;
       max-width: 100%;
       height: 100%;
       aspect-ratio: 16/9;
@@ -306,16 +309,19 @@ header{
         object-position: top;
       }
     }
+    .portfolio-item-title{
+      order: 2;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      font-weight: bold;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 1rem 1rem 0 1rem;
+    }
     .portfolio-item-text{
-      padding: 1rem;
-      .portfolio-item-text-title{
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        font-weight: bold;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
+      order: 3;
+      padding: 0 1rem 1rem 1rem;
       .portfolio-item-text-desc{
         font-size: 1rem;
         overflow: hidden;
@@ -419,16 +425,16 @@ header{
       padding: .5rem 1rem .5rem .25rem;
     }
   }
+  .portfolio-item-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+  }
   .portfolio-item-text{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    .portfolio-item-text-title{
-      order: 1;
-      font-size: 1.2rem;
-      font-weight: bold;
-      line-height: 2rem;
-    }
+    padding: 1rem 2rem;
     .portfolio-item-text-url{
       order: 3;
       margin-top: 1rem;
