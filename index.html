@@ -299,6 +299,7 @@
               <ul>
                 <li>Electron</li>
                 <li>React</li>
+                <li>JavaScript</li>
                 <li>Babel</li>
               </ul>
             </div>
@@ -348,6 +349,7 @@
               <ul>
                 <li>Electron</li>
                 <li>React</li>
+                <li>JavaScript</li>
                 <li>Babel</li>
               </ul>
             </div>
@@ -356,7 +358,7 @@
         <!-- jimaku-server -->
         <div class="portfolio-item">
           <div class="portfolio-item-img">
-            <img src="src/img/sc-jimaku.png"/>
+            <img src="src/img/sc-jimaku.png" style="max-height: 400px; width: auto;"/>
           </div>
           <div class="portfolio-item-text">
             <div class="portfolio-item-text-title">jimaku-server</div>
@@ -388,6 +390,46 @@
           </div>
         </div>
         <!-- suggestrap -->
+        <div class="portfolio-item">
+          <div class="portfolio-item-img">
+            <img src="src/img/sc-suggestrap.png" style="max-height: 400px; width: auto;"/>
+          </div>
+          <div class="portfolio-item-text">
+            <div class="portfolio-item-text-title">suggestrap</div>
+            <div class="portfolio-item-text-desc">
+              <p>検索フォームなどの入力時にサジェストを表示する機能を実現するnpmライブラリです。</p>
+              <p>
+                ユーザが値を入力すると、suggestrapが入力された値を元に検索候補のJSONファイルを予め用意したJSONサーバに対して要求し、
+                そのJSONファイルをパースしてサジェストとして表示します。
+              </p>
+              <p>また、JSONサーバなしで予め検索候補を用意しておき、その中からマッチする検索候補をサジェストとして表示することもできます。</p>
+              <p>
+                このライブラリを作った理由としては、かつてはこれと類似のライブラリでTwitter社が開発・公開していた
+                <a href="https://twitter.github.io/typeahead.js/">typeahead.js</a>がありましたが、
+                かなり前に開発が終了しており日本語の表示に難があるなど不便な部分も多く、
+                当時はこれの代替となるよなライブラリもなかったこともあり自分で作ることにしました。
+              </p>
+            </div>
+            <div class="portfolio-item-text-repo">
+              <ul>
+                <li>
+                  <a class="portfolio-item-link-box" href="https://github.com/mrhorin/suggestrap" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="portfolio-item-link-box-url">
+                      https://github.com/mrhorin/suggestrap
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-item-text-tech">
+              <ul>
+                <li>JavaScript</li>
+                <li>Babel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="dist/main.js"></script>
