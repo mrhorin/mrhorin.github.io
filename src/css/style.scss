@@ -138,6 +138,28 @@
   left:50%;
 }
 
+body.dark-theme .font-gradation1{
+  background: linear-gradient(270deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
+  background-size: 600%;
+  animation: anime-gradation 15s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-theme .font-gradation2{
+  background: linear-gradient(45deg, #2BFF88 0%, #FA8BFF 40%, #2BD2FF 80%);
+  background-size: 600%;
+  animation: anime-gradation 15s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes anime-gradation {
+  0%{ background-position: 0% 50% }
+  50%{ background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -218,6 +240,15 @@ header{
   padding: 30px;
   animation: fadeIn 0.5s linear 0s 1 normal;
 }
+.profile-title{
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: .75rem;
+}
 .profile-avatar{
   width: 120px;
   height: 120px;
@@ -230,6 +261,14 @@ header{
     height: auto;
     user-select: none;
   }
+}
+.profile-name{
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem 0;
+  font-family: "Jersey 15", sans-serif;
 }
 .profile-skills{
   display: flex;
@@ -289,12 +328,6 @@ header{
       line-height: 1.5rem;
     }
   }
-}
-.profile-title{
-  font-size: 1.2rem;
-  margin: 1rem 0;
-  text-align: center;
-  font-weight: bold;
 }
 
 .portfolio{
