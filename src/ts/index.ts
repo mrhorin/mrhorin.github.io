@@ -1,12 +1,12 @@
 import 'css/style'
 import { dom, library } from '@fortawesome/fontawesome-svg-core'
-import { faHtml5, faCss3Alt, faJs, faSketch, faReact, faWordpress, faLinux, faDocker, faGit, faPython, faGithub, faLinkedin, faRProject } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faMoon } from '@fortawesome/free-regular-svg-icons'
 import { faLink, faXmark, faSun } from '@fortawesome/free-solid-svg-icons'
 
 import { Modal } from 'ts/modal'
 
-library.add(faHtml5, faCss3Alt, faJs, faSketch, faReact, faWordpress, faLinux, faDocker, faGit, faPython, faEnvelope, faGithub, faLinkedin, faRProject, faLink, faXmark, faSun, faMoon)
+library.add(faGithub, faLinkedin, faEnvelope, faLink, faXmark, faSun, faMoon)
 dom.i2svg()
 
 document.addEventListener("DOMContentLoaded", () => {

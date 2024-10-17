@@ -16,6 +16,7 @@
   --font-link-color: #2652e2;
   --border-color1: #d4d2e0;
   --box-overlay-color: #dbdbdb;
+  --wp-icon-color: #494949;
  }
  body.dark-theme{
   --main-bg-color1: #1b1b1b;
@@ -26,6 +27,7 @@
   --font-link-color: var(--accent-color1);
   --border-color1: #525252;
   --box-overlay-color: #6f6f6f;
+  --wp-icon-color: #ffffff;
   ::-webkit-scrollbar{
     background: var(--main-bg-color1);
     border-left: none;
@@ -246,9 +248,20 @@ header{
     .profile-skills-item-icon{
       font-size: 2.3rem;
       line-height: 0rem;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      img, svg, i{
+        height: 36px;
+        width: auto;
+      }
+      .wp-icon{
+        fill: var(--wp-icon-color)
+      }
     }
     .profile-skills-item-name{
       font-size: 0.75rem;
+      font-weight: 600;
       margin-top: 0.75rem;
     }
   }
